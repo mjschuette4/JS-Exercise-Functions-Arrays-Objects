@@ -45,7 +45,7 @@ function makePersonObject(id1, name1, email1) {
     name: name1,
     email: email1,
   };
-  return(person);
+  return person;
 }
 
 
@@ -86,7 +86,7 @@ function makeSmartPerson(name, number1, number2) {
       return number1 + number2;
     },
     speak: function() {
-      return ('Hello, my name is ' + name)
+      return ('Hello, my name is ' + name);
     }
   }
   return smartPerson;
@@ -147,8 +147,8 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  const carNum = inventory.find((item, index) => {
-    return index === index
+  const carNum = inventory.find((item, index1) => {
+    return index === index1;
   })
   return `The car is a ${carNum.car_make} ${carNum.car_model}`
 }
@@ -166,7 +166,7 @@ function getCarInfoByIndex(inventory, index) {
 */
 function getLastCarInfo(inventory) {
   const carNum = inventory.find((item, index) => {
-    return index === inventory.length - 1
+    return index === inventory.length - 1;
   })
   return `This is a ${carNum.car_make} ${carNum.car_model}`
 }
@@ -185,8 +185,8 @@ function getLastCarInfo(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoById(inventory, index) {
-  const carNum = inventory.find((item, index) => {
-    return index === index
+  const carNum = inventory.find(({id}) => {
+    return id === index;
   })
   return `This is a ${carNum.car_make} ${carNum.car_model}`
 }
