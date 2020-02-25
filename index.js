@@ -242,8 +242,8 @@ function getModelYears(inventory) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
+function getOlderCars(inventory, max_year) {
+  return inventory.filter(car => car.car_year <= max_year);
 }
 
 /**
@@ -257,8 +257,8 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(inventory) {
+  return inventory.filter(car => car.car_make == `Audi` || car.car_make == `Mercedes-Benz` || car.car_make == `Volkswagen` || car.car_make == `BMW`);
 }
 
 /**
